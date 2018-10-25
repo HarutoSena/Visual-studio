@@ -1,0 +1,11 @@
+C:\Users\12009016\source\repos\WebScraping\WebScraping\bin\Debug\WebScraping.exe.config
+C:\Users\12009016\source\repos\WebScraping\WebScraping\bin\Debug\WebScraping.exe
+C:\Users\12009016\source\repos\WebScraping\WebScraping\bin\Debug\WebScraping.pdb
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.csprojAssemblyReference.cache
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.Form1.resources
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.Properties.Resources.resources
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.csproj.GenerateResource.cache
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.csproj.CoreCompileInputs.cache
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.exe
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.pdb
+C:\Users\12009016\source\repos\WebScraping\WebScraping\obj\Debug\WebScraping.Form2.resources

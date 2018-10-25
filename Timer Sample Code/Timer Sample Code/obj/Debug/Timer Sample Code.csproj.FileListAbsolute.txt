@@ -1,0 +1,9 @@
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\bin\Debug\Timer Sample Code.exe.config
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\bin\Debug\Timer Sample Code.exe
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\bin\Debug\Timer Sample Code.pdb
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer_Sample_Code.Properties.Resources.resources
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer Sample Code.csproj.GenerateResource.cache
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer Sample Code.csproj.CoreCompileInputs.cache
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer Sample Code.exe
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer Sample Code.pdb
+C:\Users\12009016\source\repos\Timer Sample Code\Timer Sample Code\obj\Debug\Timer_Sample_Code.Desplay.resources

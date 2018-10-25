@@ -1,0 +1,16 @@
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\bin\Release\Tutrial3.exe.config
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\bin\Release\Tutrial3.exe
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\bin\Release\Tutrial3.pdb
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\bin\Release\ja-JP\Tutrial3.resources.dll
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\bin\Release\nd\Tutrial3.resources.dll
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.Form1.resources
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.Form2.resources
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.Properties.Resources.resources
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.Form1.ja-JP.resources
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.Form1.nd.resources
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.csproj.GenerateResource.cache
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.csproj.CoreCompileInputs.cache
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\ja-JP\Tutrial3.resources.dll
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\nd\Tutrial3.resources.dll
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.exe
+C:\Users\12009016\source\repos\Tutrial3\Tutrial3\obj\Release\Tutrial3.pdb

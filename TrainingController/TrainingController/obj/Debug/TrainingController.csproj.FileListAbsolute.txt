@@ -1,0 +1,10 @@
+C:\Users\12009016\source\repos\TrainingController\TrainingController\bin\Debug\TrainingController.exe.config
+C:\Users\12009016\source\repos\TrainingController\TrainingController\bin\Debug\TrainingController.exe
+C:\Users\12009016\source\repos\TrainingController\TrainingController\bin\Debug\TrainingController.pdb
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.Form1.resources
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.Properties.Resources.resources
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.csproj.GenerateResource.cache
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.csproj.CoreCompileInputs.cache
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.exe
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.pdb
+C:\Users\12009016\source\repos\TrainingController\TrainingController\obj\Debug\TrainingController.csprojAssemblyReference.cache
