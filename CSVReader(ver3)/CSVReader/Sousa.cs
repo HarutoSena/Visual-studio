@@ -137,6 +137,96 @@ namespace CSVReader
             //上記で全仕訳変換
             //下から20列目のデータの頭４桁を参照し事業領域ごとに分割する-methodを別に作る
 
+            List<string[]> Honshya = new List<string[]>();
+            List<string[]> Nishi = new List<string[]>();
+            List<string[]> Tyuubu = new List<string[]>();
+            List<string[]> Kawaguchi = new List<string[]>();
+            List<string[]> Tokyo = new List<string[]>();
+            List<string[]> Osaka = new List<string[]>();
+            List<string[]> Shiga = new List<string[]>();
+            List<string[]> Tokai = new List<string[]>();
+
+            for(int i = 0;i< ans.Length; i++)
+            {
+                string Cost = "";
+                if(ans[i][19] != null || ans[i][19] != ""){
+                    Cost = ans[i][19].Substring(0, 4);
+                }
+                else
+                {
+                    Cost = ans[i][20].Substring(0, 4);
+                }
+                
+
+                switch (Cost)
+                {
+                    case "1020":
+                        Nishi.Add(ans[i]); 
+                        break;
+                    case "1030":
+                        Tyuubu.Add(ans[i]);
+                        break;
+                    case "1078":
+                        Kawaguchi.Add(ans[i]);
+                        break;
+                    case "1070":
+                        Tokyo.Add(ans[i]);
+                        break;
+                    case "1072":
+                        Osaka.Add(ans[i]);
+                        break;
+                    case "1074":
+                        Tokai.Add(ans[i]);
+                        break;
+                    case "1066":
+                        Shiga.Add(ans[i]);
+                        break;
+                    default:
+                        Honshya.Add(ans[i]);
+                        break;
+                }
+
+            }
+            Array.Clear(ans, 0, ans.Length);
+            ans = Honshya.ToArray();
+            var worksheet1 = workbook.Worksheets.Add("本社");
+            worksheet1.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Nishi.ToArray();
+            var worksheet2 = workbook.Worksheets.Add("西");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Tyuubu.ToArray();
+            var worksheet3 = workbook.Worksheets.Add("中");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Kawaguchi.ToArray();
+            var worksheet4 = workbook.Worksheets.Add("川");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Tokyo.ToArray();
+            var worksheet5 = workbook.Worksheets.Add("東");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Osaka.ToArray();
+            var worksheet6 = workbook.Worksheets.Add("大");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Tokai.ToArray();
+            var worksheet7 = workbook.Worksheets.Add("海");
+            worksheet2.Cell("A1").InsertData(ans);
+
+            Array.Clear(ans, 0, ans.Length);
+            ans = Shiga.ToArray();
+            var worksheet8 = workbook.Worksheets.Add("滋");
+            worksheet2.Cell("A1").InsertData(ans);
+
 
             string desk = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             desk += "\\Proplus_Data.xlsx";
