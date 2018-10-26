@@ -72,7 +72,7 @@ namespace CSVReader
             string[][] ans = readList.ToArray();
             long[] tran = new long[ans.Length];
             AccountTitle ac = new AccountTitle();
-            MessageBox.Show(ac.costcenterCode.Length + "," + ac.costcenterName.Length);
+            //MessageBox.Show("\"\"");
 
             try
             {
@@ -148,43 +148,81 @@ namespace CSVReader
 
             for(int i = 0;i< ans.Length; i++)
             {
-                string Cost = "";
-                if(ans[i][19] != null || ans[i][19] != ""){
-                    Cost = ans[i][19].Substring(0, 4);
-                }
-                else
+                try
                 {
+                    string Cost = "";
+                    if (ans[i][19] != null || ans[i][19] != "\"\"")
+                    {
+                        Cost = ans[i][19].Substring(0, 4);
+                    }
+                    else
+                    {
+                        Cost = ans[i][20].Substring(0, 4);
+                    }
+
+                    switch (Cost)
+                    {
+                        case "1020":
+                            Nishi.Add(ans[i]);
+                            break;
+                        case "1030":
+                            Tyuubu.Add(ans[i]);
+                            break;
+                        case "1078":
+                            Kawaguchi.Add(ans[i]);
+                            break;
+                        case "1070":
+                            Tokyo.Add(ans[i]);
+                            break;
+                        case "1072":
+                            Osaka.Add(ans[i]);
+                            break;
+                        case "1074":
+                            Tokai.Add(ans[i]);
+                            break;
+                        case "1066":
+                            Shiga.Add(ans[i]);
+                            break;
+                        default:
+                            Honshya.Add(ans[i]);
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    string Cost = "";
                     Cost = ans[i][20].Substring(0, 4);
+
+
+                    switch (Cost)
+                    {
+                        case "1020":
+                            Nishi.Add(ans[i]);
+                            break;
+                        case "1030":
+                            Tyuubu.Add(ans[i]);
+                            break;
+                        case "1078":
+                            Kawaguchi.Add(ans[i]);
+                            break;
+                        case "1070":
+                            Tokyo.Add(ans[i]);
+                            break;
+                        case "1072":
+                            Osaka.Add(ans[i]);
+                            break;
+                        case "1074":
+                            Tokai.Add(ans[i]);
+                            break;
+                        case "1066":
+                            Shiga.Add(ans[i]);
+                            break;
+                        default:
+                            Honshya.Add(ans[i]);
+                            break;
+                    }
                 }
                 
-
-                switch (Cost)
-                {
-                    case "1020":
-                        Nishi.Add(ans[i]); 
-                        break;
-                    case "1030":
-                        Tyuubu.Add(ans[i]);
-                        break;
-                    case "1078":
-                        Kawaguchi.Add(ans[i]);
-                        break;
-                    case "1070":
-                        Tokyo.Add(ans[i]);
-                        break;
-                    case "1072":
-                        Osaka.Add(ans[i]);
-                        break;
-                    case "1074":
-                        Tokai.Add(ans[i]);
-                        break;
-                    case "1066":
-                        Shiga.Add(ans[i]);
-                        break;
-                    default:
-                        Honshya.Add(ans[i]);
-                        break;
-                }
 
             }
             Array.Clear(ans, 0, ans.Length);
