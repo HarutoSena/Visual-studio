@@ -151,13 +151,13 @@ namespace CSVReader
                 try
                 {
                     string Cost = "";
-                    if (ans[i][19] != null || ans[i][19] != "\"\"")
+                    if (string.IsNullOrWhiteSpace(ans[i][19]) || ans[i][19].Length ==0) 
                     {
-                        Cost = ans[i][19].Substring(0, 4);
+                        Cost = ans[i][20].Substring(0, 4);
                     }
                     else
                     {
-                        Cost = ans[i][20].Substring(0, 4);
+                        Cost = ans[i][19].Substring(0, 4);
                     }
 
                     switch (Cost)
@@ -192,7 +192,7 @@ namespace CSVReader
                 {
                     string Cost = "";
                     Cost = ans[i][20].Substring(0, 4);
-
+                    MessageBox.Show("error occured");
 
                     switch (Cost)
                     {
@@ -225,45 +225,32 @@ namespace CSVReader
                 
 
             }
-            Array.Clear(ans, 0, ans.Length);
-            ans = Honshya.ToArray();
+           
             var worksheet1 = workbook.Worksheets.Add("本社");
-            worksheet1.Cell("A1").InsertData(ans);
+            worksheet1.Cell("A1").InsertData(Honshya.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Nishi.ToArray();
+           
             var worksheet2 = workbook.Worksheets.Add("西");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet2.Cell("A1").InsertData(Nishi.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Tyuubu.ToArray();
             var worksheet3 = workbook.Worksheets.Add("中");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet3.Cell("A1").InsertData(Tyuubu.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Kawaguchi.ToArray();
+
             var worksheet4 = workbook.Worksheets.Add("川");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet4.Cell("A1").InsertData(Kawaguchi.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Tokyo.ToArray();
             var worksheet5 = workbook.Worksheets.Add("東");
-            worksheet2.Cell("A1").InsertData(ans);
-
-            Array.Clear(ans, 0, ans.Length);
-            ans = Osaka.ToArray();
+            worksheet5.Cell("A1").InsertData(Tokyo.ToArray());
+;
             var worksheet6 = workbook.Worksheets.Add("大");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet6.Cell("A1").InsertData(Osaka.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Tokai.ToArray();
             var worksheet7 = workbook.Worksheets.Add("海");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet7.Cell("A1").InsertData(Tokai.ToArray());
 
-            Array.Clear(ans, 0, ans.Length);
-            ans = Shiga.ToArray();
             var worksheet8 = workbook.Worksheets.Add("滋");
-            worksheet2.Cell("A1").InsertData(ans);
+            worksheet8.Cell("A1").InsertData(Shiga.ToArray());
 
 
             string desk = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
