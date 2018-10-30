@@ -78,30 +78,28 @@ namespace CSVReader
             {
                 for (int i = 0; i < ans.Length; i++)
                 {
+                    //ジャグ配列のためansの配列要素（2次元目）が22までしかないものがあるためエラーを吐く
+                    //仕訳の要素数はMAX32だと判明+2列する（勘定科目、原価センタ）
+                    Array.Resize(ref ans[i], 34);
+
                     for (int j = 0; j < ac.code.Length; j++)
                     {
                         if (ans[i][12] == ac.code[j])
                         {
-                            ans[i][13] = ac.name[j];
+                            ans[i][32] = ac.name[j];
                         }
-                        //ジャグ配列のためansの配列要素（2次元目）が22までしかないものがあるためエラーを吐く
-                        //どうにか配列の要素数を増やしたいが上手くいかない
-                        if(ans[i].Length < 24)
-                        {
-                            Array.Resize(ref ans[i], ans[i].Length + 10);
-                        }
-
+                        
                     }
 
                     for (int k = 0; k < ac.costcenterName.Length; k++)
                     {
                         if ((ans[i][19] == "" && ans[i][20] == ac.costcenterCode[k]) || (ans[i][19] == null && ans[i][20] == ac.costcenterCode[k]))
                         {
-                            ans[i][23] = ac.costcenterName[k];
+                            ans[i][33] = ac.costcenterName[k];
                         }
                         else if (ans[i][19] == ac.costcenterCode[k])
                         {   
-                            ans[i][23] = ac.costcenterName[k];
+                            ans[i][33] = ac.costcenterName[k];
                         }
                         else
                         {
@@ -124,7 +122,7 @@ namespace CSVReader
                     {
                         if (ans[i][12] == ac.code[j])
                         {
-                            ans[i][13] = ac.name[j];
+                            ans[i][32] = ac.name[j];
                         }
                     }
                     tran[i] = long.Parse(ans[i][16]);
@@ -132,8 +130,9 @@ namespace CSVReader
             }
             XLWorkbook workbook = new XLWorkbook();
             var worksheet = workbook.Worksheets.Add("Journal Entries");
-            worksheet.Cell("A1").InsertData(ans);
-            worksheet.Cell("Q1").InsertData(tran);
+            worksheet.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet.Cell("A2").InsertData(ans);
+            worksheet.Cell("Q2").InsertData(tran);
             //上記で全仕訳変換
             //下から20列目のデータの頭４桁を参照し事業領域ごとに分割する-methodを別に作る
 
@@ -227,30 +226,38 @@ namespace CSVReader
             }
            
             var worksheet1 = workbook.Worksheets.Add("本社");
-            worksheet1.Cell("A1").InsertData(Honshya.ToArray());
+            worksheet1.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet1.Cell("A2").InsertData(Honshya.ToArray());
 
            
             var worksheet2 = workbook.Worksheets.Add("西");
-            worksheet2.Cell("A1").InsertData(Nishi.ToArray());
+            worksheet2.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet2.Cell("A2").InsertData(Nishi.ToArray());
 
             var worksheet3 = workbook.Worksheets.Add("中");
-            worksheet3.Cell("A1").InsertData(Tyuubu.ToArray());
+            worksheet3.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet3.Cell("A2").InsertData(Tyuubu.ToArray());
 
 
             var worksheet4 = workbook.Worksheets.Add("川");
-            worksheet4.Cell("A1").InsertData(Kawaguchi.ToArray());
+            worksheet4.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet4.Cell("A2").InsertData(Kawaguchi.ToArray());
 
             var worksheet5 = workbook.Worksheets.Add("東");
-            worksheet5.Cell("A1").InsertData(Tokyo.ToArray());
+            worksheet5.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet5.Cell("A2").InsertData(Tokyo.ToArray());
 ;
             var worksheet6 = workbook.Worksheets.Add("大");
-            worksheet6.Cell("A1").InsertData(Osaka.ToArray());
+            worksheet6.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet6.Cell("A2").InsertData(Osaka.ToArray());
 
             var worksheet7 = workbook.Worksheets.Add("海");
-            worksheet7.Cell("A1").InsertData(Tokai.ToArray());
+            worksheet7.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet7.Cell("A2").InsertData(Tokai.ToArray());
 
             var worksheet8 = workbook.Worksheets.Add("滋");
-            worksheet8.Cell("A1").InsertData(Shiga.ToArray());
+            worksheet8.Cell("A1").InsertData(new[] { ac.JournalHeader });
+            worksheet8.Cell("A2").InsertData(Shiga.ToArray());
 
 
             string desk = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);

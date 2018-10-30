@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSVReader.exe" size="186824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSVReader.exe" size="187848">
       <assemblyIdentity name="CSVReader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cJHGYY72UEVhjXmRZmiqFeVXfo67A+ZO6YpFksfU31M=</dsig:DigestValue>
+        <dsig:DigestValue>YNOu9NtmQF7OLNnc6R1jI2EuMsTHtTKiTV2ZI7yLxbQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

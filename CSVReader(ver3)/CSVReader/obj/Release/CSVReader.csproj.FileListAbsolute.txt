@@ -49,3 +49,4 @@ C:\Users\12009016\source\repos\CSVReader(ver3)\CSVReader\bin\Release\ExcelNumber
 C:\Users\12009016\source\repos\CSVReader(ver3)\CSVReader\obj\Release\CSVReader.exe.manifest
 C:\Users\12009016\source\repos\CSVReader(ver3)\CSVReader\obj\Release\CSVReader.application
 C:\Users\12009016\source\repos\CSVReader(ver3)\CSVReader\obj\Release\CSVReader.csproj.CopyComplete
+C:\Users\12009016\source\repos\CSVReader(ver3)\CSVReader\obj\Release\CSVReader.csprojAssemblyReference.cache
