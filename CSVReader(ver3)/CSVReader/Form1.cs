@@ -16,10 +16,19 @@ namespace CSVReader
 {
     public partial class Form1 : Form
     {
+        string Dpath;
         public Form1()
         {
             InitializeComponent();
             label1.Text = "ファイルをドラッグ＆ドロップしてください。";
+        }
+        public Form1(string Dpath)
+        {
+            this.Dpath = Dpath;
+            InitializeComponent();
+            Form2 form2 = new Form2(Dpath, this);
+            form2.Show();
+
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)

@@ -9,6 +9,5 @@ namespace CSVReader
     class AccountTitle
     {
        
-
     }
 }

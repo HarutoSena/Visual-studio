@@ -52,7 +52,7 @@ namespace CSVReader
 
         //こっから下はメソッド(Moduel)
         //Proplus出力仕訳データの日本語化
-        private void getCSV(string filePath)
+        private async void getCSV(string filePath)
         {
             //utf-8で読み込み
             List<string[]> readList = new List<string[]>();
@@ -72,7 +72,7 @@ namespace CSVReader
             string[][] ans = readList.ToArray();
             long[] tran = new long[ans.Length];
             AccountTitle ac = new AccountTitle();
-            //MessageBox.Show("\"\"");
+            
 
             try
             {
@@ -87,6 +87,7 @@ namespace CSVReader
                         if (ans[i][12] == ac.code[j])
                         {
                             ans[i][32] = ac.name[j];
+                            break;
                         }
                         
                     }
@@ -96,10 +97,12 @@ namespace CSVReader
                         if ((ans[i][19] == "" && ans[i][20] == ac.costcenterCode[k]) || (ans[i][19] == null && ans[i][20] == ac.costcenterCode[k]))
                         {
                             ans[i][33] = ac.costcenterName[k];
+                            break;
                         }
                         else if (ans[i][19] == ac.costcenterCode[k])
                         {   
                             ans[i][33] = ac.costcenterName[k];
+                            break;
                         }
                         else
                         {
@@ -123,6 +126,7 @@ namespace CSVReader
                         if (ans[i][12] == ac.code[j])
                         {
                             ans[i][32] = ac.name[j];
+                            break;
                         }
                     }
                     tran[i] = long.Parse(ans[i][16]);
